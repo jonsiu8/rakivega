@@ -113,7 +113,7 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, three
         </FirstProject>
         <AboutUs to="/about" aria-label="Visit my about page">
           <Img fluid={aboutUs.childImageSharp.fluid} />
-          <span>About</span>
+          <span>Bio</span>
         </AboutUs>
         <ThreeProjects>
           {threeProjects.nodes.map(project => (
@@ -123,10 +123,10 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, three
             </GridItem>
           ))}
         </ThreeProjects>
-        <Instagram to="/instagram" aria-label="See my Instagram pictures">
+          <Instagram to="/instagram" aria-label="See my Instagram pictures">
           <Img fluid={instagram.childImageSharp.fluid} />
           <span>Instagram</span>
-        </Instagram>
+          </Instagram>
       </Area>
     </Layout>
   )

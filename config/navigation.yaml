@@ -1,6 +1,7 @@
-- name: "Projects"
-  link: "/projects"
-- name: "Instagram"
-  link: "/instagram"
-- name: "About"
+- name: "Media"
+  link: "/media"
+- name: "Bio"
   link: "/about"
+- name: "Contact"
+  link: "/contact"
+

@@ -31,7 +31,7 @@ const Area = styled(animated.div)`
   }
 `
 
-const Projects: React.FunctionComponent<PageProps> = ({ data: { projects } }) => {
+const Media: React.FunctionComponent<PageProps> = ({ data: { projects } }) => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -40,7 +40,7 @@ const Projects: React.FunctionComponent<PageProps> = ({ data: { projects } }) =>
 
   return (
     <Layout color="#000">
-      <SEO title="Projects | Jodie" />
+      <SEO title="Media | Raki Vega" />
       <Area style={pageAnimation}>
         {projects.nodes.map(project => (
           <GridItem key={project.slug} to={project.slug} aria-label={`View project "${project.title}"`}>
@@ -53,7 +53,7 @@ const Projects: React.FunctionComponent<PageProps> = ({ data: { projects } }) =>
   )
 }
 
-export default Projects
+export default Media
 
 export const query = graphql`
   query Projects {

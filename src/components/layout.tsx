@@ -6,7 +6,18 @@ import 'typeface-work-sans'
 import { Box, Flex } from '../elements'
 import theme from '../../config/theme'
 import reset from '../styles/reset'
-import Logo from './logo'
+//import Logo from './logo'
+import logo from "./logo1.svg"
+
+const Logo = styled.img`
+  width: 100px;
+  margin-top: 0px;
+  padding-top: 11px;
+
+  @media (max-width: 736px) {
+    width: 50px;
+  }
+`
 
 const GlobalStyles = createGlobalStyle`
   *::before,
@@ -230,7 +241,8 @@ const Layout = ({ children, color }: LayoutProps) => {
             >
               <Box width={['3rem', '4rem', '5rem', '6rem']}>
                 <Link to="/" aria-label="LekoArts, Back to Home">
-                  <Logo />
+                  {/* <Logo /> */}
+                  <Logo src={logo}/>
                 </Link>
               </Box>
               <Nav
@@ -252,8 +264,8 @@ const Layout = ({ children, color }: LayoutProps) => {
           <Main>{children}</Main>
           <Footer color={color}>
             <Box p={[6, 6, 8]} fontSize={0}>
-              Starter by <a href="https://www.lekoarts.de/en">LekoArts</a>.<br />
-              <a href="https://github.com/LekoArts/gatsby-starter-portfolio-jodie">Source</a>.
+              <a href="https://www.rakivega.com">rakivega.com</a><br />
+              {/*<a href="https://github.com/LekoArts/gatsby-starter-portfolio-jodie">Source</a>.*/}
             </Box>
           </Footer>
         </Wrapper>
